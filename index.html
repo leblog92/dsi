@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Hyrule Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+<style>
+html,body{
+	height:100%;
+	margin:0;
+}
+body{
+	background-color:#000;
+}
+.t1{
+	font-family:"Tilt Warp",cursive;
+	cursor:pointer;
+	user-select:none;
+	transition:1s;
+	fill:#15a5f9;
+}
+</style>
+</head>
+
+<img src="tablet_head.png" width="100%" height="auto" style="position:fixed;top:0;left:0"/>
+<img src="tablet_foot.png" width="100%" height="auto" style="position:fixed;bottom:0;left:0"/>
+
+<svg width="100%" height="100%" viewBox="0 0 160 90">
+	<defs>
+		<g id="spot">
+			<circle cx="0" cy="0" fill="gold" r="0.3"/>
+			<circle cx="0" cy="0" fill="none" r="0.5" stroke="gold" stroke-width="0.1"/>
+			<circle cx="0" cy="0" fill="none" r="0" stroke="white" stroke-width="0.1">
+				<animate attributename="r" begin="0s" repeatcount="indefinite" dur="1s" values="0;1"/>
+			</circle>
+		</g>
+	</defs>
+	<rect width="160" height="90" stroke="#15a5f9" fill="rgba(0,0,0,.4)" stroke-width="0.1"/>
+	<path d="m0 45L160 45" stroke-width="90" stroke-dasharray="0.1 4.9" stroke="#15a5f9" opacity="0.4"/>
+	<path d="m80 0L80 90" stroke-width="160" stroke-dasharray="0.1 4.9" stroke="#15a5f9" opacity="0.4"/>
+	<!-- <rect x="25" y="10" width="125" height="70" fill="#15a5f9" opacity="0.15"/> -->
+
+	<g id="forum" transform="translate(25 10)">
+		
+	</g>
+
+	<g id="jeunesse" transform="translate(25 5)">
+		<image xlink:href="jeunesse.png" height="80"/>
+		<use href="#spot" x="67" y="60"/>
+		<use href="#spot" x="74.5" y="37"/>
+	</g>
+	
+</svg>
+
+<svg width="100%" height="100%" viewBox="0 0 160 90" style="position:fixed;top:0;left:0">
+	<g transform="translate(2 33.5)" font-size="3">
+		<text class="t1" y="0">Forum</text>
+		<text class="t1"  y="5">Pôle Jeunesse</text>
+		<text class="t1"  y="10">Pôle Littérature</text>
+		<text class="t1"  y="15">Pôle Sciences</text>
+		<text class="t1"  y="20">Pôle Musique</text>
+		<text class="t1"  y="25">Administration</text>
+	</g>
+</svg>
+
+</html>
